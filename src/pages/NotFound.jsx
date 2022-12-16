@@ -1,6 +1,6 @@
 import React from 'react'
 
-function NoFound() {
+function NotFound() {
   return (
     <>
 		<div>
@@ -10,4 +10,4 @@ function NoFound() {
   )
 }
 
-export default NoFound
+export default NotFound

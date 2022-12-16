@@ -3,9 +3,15 @@ import {createBrowserRouter,RouterProvider,} from "react-router-dom";
 import '../styles/global.css'
 import Layout from '../containers/Layout'
 import Home from '../pages/Home';
-import NoFound from '../pages/NoFound';
-import Login from '../containers/Login'
-import RecoveryPassword from '../containers/RecoveryPassword'
+import Login from '../pages/Login';
+import RecoveryPassword from '../pages/RecoveryPassword';
+import SendEmail from '../pages/SendEmail';
+import NewPassword from '../pages/NewPassword';
+import MyAccount from '../pages/MyAccount';
+import CreateAccount from '../pages/CreateAccount';
+import Checkout from '../pages/Checkout';
+import Orders from '../pages/Orders';
+import NotFound from '../pages/NotFound';
 
 function App() {
   const router = createBrowserRouter([
@@ -20,6 +26,30 @@ function App() {
     {
       path: "recovery-password",
       element: <RecoveryPassword />,
+    },
+    {
+      path: "send-email",
+      element: <SendEmail />,
+    },
+    {
+      path: "new-password",
+      element: <NewPassword />,
+    },
+    {
+      path: "account",
+      element: <MyAccount />,
+    },
+    {
+      path: "signup",
+      element: <CreateAccount />,
+    },
+    {
+      path: "checkout",
+      element: <Checkout />,
+    },
+    {
+      path: "orders",
+      element: <Orders />,
     }
   ]);
   return (
