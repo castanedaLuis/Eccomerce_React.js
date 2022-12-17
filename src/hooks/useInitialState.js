@@ -15,10 +15,18 @@ const useInitialState = () => {
 			total: state.total + payload.price
 		});
 	};
-
+	const removeFromCart = (payload,indexValue) =>{
+		//const newArray = state.cart.filter(product => product != payload);
+		setState({
+			...state,
+			cart: state.cart.filter((items, index) => items.id !== payload && index !== indexValue),
+			total: state.total - payload.price
+		});
+	}
 	return {
 		state,
-		addToCart
+		addToCart,
+		removeFromCart,
 	}
 }
 
