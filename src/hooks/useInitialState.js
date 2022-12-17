@@ -2,6 +2,7 @@ import { useState } from "react";
 
 const initialState = {
 	cart: [],
+	total:0
 }
 
 const useInitialState = () => {
