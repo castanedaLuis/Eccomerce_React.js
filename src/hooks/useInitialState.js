@@ -13,6 +13,7 @@ const useInitialState = () => {
 			...state,
 			cart: [...state.cart, payload],
 			total: state.total + payload.price
+			
 		});
 	};
 	const removeFromCart = (payload,indexValue) =>{
