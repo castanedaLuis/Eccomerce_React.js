@@ -11,6 +11,9 @@
 	bottom: auto;
 	border-radius: 6px;
 	border: 1px solid var(--very-light-pink);
+	position: fixed;
+	transition: 1s ease;
+	animation: swipeLeft 1s ease forwards;
 }
 .title-container {
 	display: flex;
@@ -61,4 +64,7 @@
 	.MyOrder {
 		width: 100%;
 	}
+}
+@keyframes swipeLeft {
+	100% {transform: translateX(-20px);}
 }
