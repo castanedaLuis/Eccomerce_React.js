@@ -1,5 +1,7 @@
 import React from 'react'
 import {createBrowserRouter,RouterProvider,} from "react-router-dom";
+import AppContext from '../context/AppContext';
+import useInitialState from '../hooks/useInitialState.js'
 import '../styles/global.css'
 import Layout from '../containers/Layout'
 import Home from '../pages/Home';
@@ -13,6 +15,7 @@ import Checkout from '../pages/Checkout';
 import Orders from '../pages/Orders';
 import NotFound from '../pages/NotFound';
 import Header from '../components/Header';
+
 
 function App() {
   const router = createBrowserRouter([
@@ -53,14 +56,17 @@ function App() {
       element: <Orders />,
     }
   ]);
+  const initialContext = useInitialState()
   return (
     <>
+    <AppContext.Provider value={initialContext}>
       <Header />
       <React.StrictMode>
         <Layout>
           <RouterProvider router={router} />
         </Layout>
       </React.StrictMode>
+    </AppContext.Provider>
     </>
   )
 }
