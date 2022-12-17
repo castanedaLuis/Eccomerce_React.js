@@ -12,6 +12,7 @@ import CreateAccount from '../pages/CreateAccount';
 import Checkout from '../pages/Checkout';
 import Orders from '../pages/Orders';
 import NotFound from '../pages/NotFound';
+import Header from '../components/Header';
 
 function App() {
   const router = createBrowserRouter([
@@ -54,6 +55,7 @@ function App() {
   ]);
   return (
     <>
+      <Header />
       <React.StrictMode>
         <Layout>
           <RouterProvider router={router} />

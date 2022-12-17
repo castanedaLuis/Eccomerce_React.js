@@ -1,12 +1,12 @@
-import React from 'react'
-import Header from '../components/Header'
+import React from 'react';
+import ProductList from '@containers/ProductList';
 
-function Home() {
-  return (
-    <>
-      <Header />
-    </>
-  )
+const Home = () => {
+	return (
+		<>
+			<ProductList />
+		</>
+	);
 }
 
-export default Home
+export default Home;
